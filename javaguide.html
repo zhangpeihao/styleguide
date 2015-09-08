@@ -2,10 +2,8 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="javaguide.css"/>
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"
+  <script src="run_prettify.js"
           type="text/javascript"></script>
-  <link href="http://www.google.com/favicon.ico"
-        type="image/x-icon" rel="shortcut icon" />
   <title>Google Java Style</title>
 </head>
 <body>
@@ -286,12 +284,12 @@ anywhere in a source file. This implies that:</p><ol><li>All other whitespace ch
 <code class="prettyprint lang-java">\'</code> and
 <code class="prettyprint lang-java">\\</code>), that sequence
 is used rather than the corresponding octal
-(e.g. <code class="badcode">\012</code>) or Unicode
-(e.g. <code class="badcode">\u000a</code>) escape.</p><a name="s2.3.3-non-ascii-characters"/>
+(e.g. <code class="badcode">\012</code>) or Unicode
+(e.g. <code class="badcode">\u000a</code>) escape.</p><a name="s2.3.3-non-ascii-characters"/>
     <h4>2.3.3 Non-ASCII characters&nbsp;<a href="#s2.3.3-non-ascii-characters"><img height="21" width="21" src="javaguidelink.png"/></a></h4>
     <p>For the remaining non-ASCII characters, either the actual Unicode character
-(e.g. <code class="prettyprint lang-java">∞</code>) or the equivalent Unicode escape
-(e.g. <code class="prettyprint lang-java">\u221e</code>) is used, depending only on which
+(e.g. <code class="prettyprint lang-java">∞</code>) or the equivalent Unicode escape
+(e.g. <code class="prettyprint lang-java">\u221e</code>) is used, depending only on which
 makes the code <strong>easier to read and understand</strong>.</p><p class="tip"><strong>Tip:</strong> In the Unicode escape case, and occasionally even when actual
 Unicode characters are used, an explanatory comment can be very helpful.</p><p>Examples:</p><table><tr><th>Example</th><th>Discussion</th></tr><tr><td><code class="prettyprint lang-java">String unitAbbrev = "μs";</code></td><td>Best: perfectly clear even without a comment.</td></tr><tr><td><code class="prettyprint lang-java">String unitAbbrev = "\u03bcs"; // "μs"</code></td><td>Allowed, but there's no reason to do this.</td></tr><tr><td><code class="prettyprint lang-java">String unitAbbrev = "\u03bcs";
       // Greek letter mu, "s"</code></td><td>Allowed, but awkward and prone to mistakes.</td></tr><tr><td><code class="badcode">String unitAbbrev = "\u03bcs";</code></td><td>Poor: the reader has no idea what this is.</td></tr><tr><td><code class="prettyprint lang-java">return '\ufeff' + content;
@@ -681,7 +679,7 @@ predictability, Google Style specifies the following (nearly) deterministic sche
   hyphens).
 
   <ul><li><em>Recommended:</em> if any word already has a conventional camel-case appearance in common
-    usage, split this into its constituent parts (e.g., "AdWords" becomes "ad words"). Note
+    usage, split this into its constituent parts (e.g., "AdWords" becomes "ad words"). Note
     that a word such as "iOS" is not really in camel case <em>per se</em>; it defies <em>any</em>
     convention, so this recommendation does not apply.</li></ul></li><li>Now lowercase <em>everything</em> (including acronyms), then uppercase only the first
   character of:
